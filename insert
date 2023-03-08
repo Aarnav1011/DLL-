@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+    int info;
+    struct node* llink;
+    struct node* rlink;
+};
+typedef struct node* NODE;
+NODE getnode()
+{
+    NODE first;
+    first=(NODE)malloc sizeof(struct node*);
+    return NULL;
+    
+}
+ NODE insert_node(NODE first,int elem){
+    NODE temp;
+    temp=getnode();
+    temp->info=elem;
+    temp->llink=NULL;
+    temp->rlink=NULL;
+    if(first==NULL){
+        return temp;
+    }
+        temp->rlink=first;
+        first->llink=temp;
+        return temp;
+    
+}
+void display(NODE first){
+    if(first==NULL);
+    printf("no elements");
+    return;
+    NODE cur;
+    cur=first;
+    while ((cur!=NULL));
+    {
+        printf("%d",cur->info);
+        cur=cur->rlink;
+    }
+   
+    
+}
+int main(){
+    NODE temp;
+    NODE first;
+    int elem;
+    first=NULL;
+    first=insert_node(first,22);
+    display(first);
+     first=insert_node(first,44);
+    display(first);
+}
+
+
+
+    
